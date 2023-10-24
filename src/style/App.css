@@ -1,0 +1,291 @@
+@font-face {
+  font-family: "StarJedi";
+  src: url("../style/fonts/new/StarJedi.ttf") format("woff2"),
+    url("../style/fonts/new/StarJedi.woff") format("woff"),
+    url("../style/fonts/new/StarJedi.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "StarJediHollow";
+  src: url("../style/fonts/new/StarJediHollow.woff2") format("woff2"),
+    url("../style/fonts/new/StarJediHollow.woff") format("woff"),
+    url("../style/fonts/new/StarJediHollow.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+header {
+  color: rgb(255, 255, 255);
+  position: relative;
+  z-index: 5;
+}
+
+.header-row {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.title-main {
+  font-family: "Star Jedi Hollow", Quicksand;
+  font-size: 3rem;
+  text-shadow: 0px 0px 5px greenyellow;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+.gh-btn {
+  width: 15px;
+  height: 15px;
+  border-radius: 40px;
+  position: absolute;
+  top: 6vh;
+  left: 7vh;
+  transform: scale(2.6);
+  color: white;
+  box-shadow: 0px 0px 10px greenyellow;
+  background-color: rgb(139, 136, 130);
+}
+
+.gh-btn:hover {
+  -moz-animation: button-twink 1s linear infinite;
+  -ms-animation: button-twink 1s linear infinite;
+  -o-animation: button-twink 1s linear infinite;
+  -webkit-animation: button-twink 1s linear infinite;
+  animation: button-twink 1s linear infinite;
+}
+
+.gh-btn-icon {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  bottom: 8px;
+}
+
+.svg-inline--fa {
+  vertical-align: 0.125em;
+}
+
+.new-game,
+.announcer {
+  z-index: 10;
+  color: white;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.announcer {
+  transform: translate(-50%, -50%);
+}
+
+.new-game-wrapper {
+  /* background-image: url(./x-wing2.gif); */
+  background-origin: center;
+  background-position: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 400px;
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 80px #000000, inset 0 0 10px 20px #000000;
+}
+
+.new-game-btn,
+.start-game-btn {
+  justify-self: center;
+  position: absolute !important;
+  bottom: 5vh;
+  left: 50vw;
+  transform: translate(-50%, 0%);
+  font-size: 2rem;
+  width: 500px;
+}
+
+.star-btn {
+  background-color: black;
+  border: 2px double white;
+  border-radius: 5px;
+  color: white;
+  font-family: "Star Jedi", Quicksand;
+  transition: all 1s;
+  padding: 10px;
+}
+
+.star-btn:hover {
+  box-shadow: 0px 0px 30px lightskyblue;
+}
+
+.announcer {
+  background-color: rgb(72, 75, 82);
+  border: 5px solid white;
+  box-shadow: 0px 0px 20px lime, inset 0px 0px 50px black;
+  top: 45vh;
+  border-radius: 50px;
+  width: 700px;
+  padding: 50px;
+}
+
+.announcer.dark {
+  background-color: rgb(79, 80, 85);
+  box-shadow: 0px 0px 20px rgb(199, 35, 35), inset 0px 0px 50px black;
+}
+
+.announcer h1 {
+  padding: 10px 10px 20px 10px;
+  text-shadow: 0px 0px 15px lime;
+  font-family: "Star Jedi", Quicksand;
+}
+
+.announcer.dark h1 {
+  text-shadow: 0px 0px 15px rgb(199, 35, 35);
+  padding: 20px;
+}
+
+.img-wrapper {
+  width: 460px;
+  height: 250px;
+  overflow: hidden;
+  justify-self: center;
+  margin: auto;
+  margin-bottom: 55px;
+}
+
+@keyframes button-twink {
+  from {
+    box-shadow: 0px 0px 0px greenyellow;
+  }
+  to {
+    box-shadow: 0px 0px 15px greenyellow;
+  }
+  to {
+    box-shadow: 0px 0px 30px greenyellow;
+  }
+}
+@-webkit-keyframes button-twink {
+  from {
+    box-shadow: 0px 0px 10px greenyellow;
+  }
+  to {
+    box-shadow: 0px 0px 15px greenyellow;
+  }
+}
+@-moz-keyframes button-twink {
+  from {
+    box-shadow: 0px 0px 10px greenyellow;
+  }
+  to {
+    box-shadow: 0px 0px 15px greenyellow;
+  }
+}
+@-ms-keyframes button-twink {
+  from {
+    box-shadow: 0px 0px 10px greenyellow;
+  }
+  to {
+    box-shadow: 0px 0px 15px greenyellow;
+  }
+}
+
+.trans-enter {
+  opacity: 0;
+}
+.trans-enter-active {
+  opacity: 1;
+  transition: opacity 2000ms;
+}
+.trans-exit {
+  opacity: 1;
+}
+.trans-exit-active {
+  opacity: 0;
+  transition: opacity 200ms, transform 2000ms;
+}
+
+@media (max-width: 768px) {
+  .header-row {
+    padding: 0px;
+  }
+
+  .gh-btn {
+    transform: scale(1.9) !important;
+    top: 3vh;
+    left: 6vw;
+  }
+
+  .crawl {
+    width: 120%;
+  }
+
+  .title-main {
+    font-size: 1.8rem;
+  }
+
+  .star-wars-intro {
+    font-size: 2rem;
+  }
+
+  .new-game-btn,
+  .start-game-btn {
+    font-size: 1rem;
+    width: initial;
+  }
+
+  .game {
+    flex-direction: column;
+    top: 2vh !important;
+    height: auto;
+  }
+
+  .new-game-wrapper {
+    transform: scale(0.8);
+  }
+
+  .side-title {
+    display: none;
+  }
+
+  .outer-wrapper {
+    transform: scale(0.6) translate(0, -33%);
+    flex-direction: column;
+  }
+
+  .dark.game-board {
+    margin-top: -140px !important;
+  }
+
+  .ship-menage-wrapper {
+    transform: scale(0.9) translate(-20%, 0);
+  }
+
+  .start-game-btn {
+    position: fixed !important;
+    bottom: 2vh;
+  }
+
+  .game .star-btn:nth-child(n + 2) {
+    display: none;
+  }
+
+  .announcer {
+    transform: scale(0.5) translate(-100%, -50%);
+    overflow: hidden;
+    width: 170%;
+    top: 30vh;
+  }
+}
+
+.chek {
+  position: relative;
+  left: 600px;
+}

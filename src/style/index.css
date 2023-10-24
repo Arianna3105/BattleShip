@@ -1,0 +1,64 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-image: url(./light.jpg);
+}
+
+body[data-theme="dark"] {
+  background-image: url(./darks.jpg);
+}
+body[data-theme="dark"] .game {
+  background-color: rgb(26, 25, 25);
+  color: white;
+}
+.new-game {
+  color: black !important;
+  background-color: #525761e8;
+  width: 80%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border-radius: 10px;
+  padding: 40px;
+}
+.new-game > h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0 4px 8.896px #fff, 0 -2px 1px #c4b59d;
+}
+
+.rules {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.new-game > p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.rul-text {
+  font-size: 20px;
+}
+
+body[data-theme="dark"] .new-game {
+  background-color: rgb(26, 25, 25);
+  color: white !important;
+
+  box-shadow: 0px 1px 2px 0px #aab0bde8, 1px 2px 4px 0px #aab0bde8,
+    2px 4px 8px 0px #aab0bde8, 2px 4px 16px 0px #aab0bde8;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

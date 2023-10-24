@@ -1,0 +1,27 @@
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mainTitle {
+  animation: slideIn 1s ease-in-out;
+  color: black;
+
+  text-shadow: 0 13.36px 8.896px #fff, 0 -2px 1px #c4b59d;
+
+  letter-spacing: -4px;
+  font-size: 300px;
+}
+
+.title {
+  font-family: "Paytone One";
+  color: #202020;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+}

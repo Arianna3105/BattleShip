@@ -1,0 +1,62 @@
+.fade {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  /* top: 5vh; */
+  z-index: 6;
+  overflow: hidden;
+}
+
+.starWarsIntro {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 800px;
+  color: #fffd6d;
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 400px;
+  text-align: justify;
+}
+
+.startGameBtn {
+  justify-self: center;
+  position: absolute !important;
+  bottom: 5vh;
+  left: 50vw;
+  transform: translate(-50%, 0%);
+  font-size: 2rem;
+  width: 500px;
+}
+
+.starBtn {
+  background-color: black;
+  border: 2px double white;
+  border-radius: 5px;
+  color: white;
+  font-family: "Star Jedi", Quicksand;
+  transition: all 1s;
+  /* padding: 10px; */
+  height: 80px;
+}
+
+.starBtn:hover {
+  box-shadow: 0px 0px 30px lightskyblue;
+}
+
+.butTitl {
+  position: relative;
+  bottom: 22px;
+}
+
+.pCenter {
+  text-align: center;
+}
+
+.rulPage[data-theme="dark"] {
+  background-color: rgb(26, 25, 25);
+  color: white;
+}

@@ -1,0 +1,231 @@
+.game {
+  position: relative;
+  height: 80vh;
+  padding: 30px;
+  margin: auto 0;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #525761e8;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px 0px #aab0bde8, 1px 2px 4px 0px #aab0bde8,
+    2px 4px 8px 0px #aab0bde8, 2px 4px 16px 0px #aab0bde8;
+  margin-top: 30px;
+}
+
+.game[data-theme="dark"] {
+  background-color: black;
+}
+
+.side-title {
+  padding: 20px;
+  text-align: center;
+  font-family: "Star Jedi", Quicksand;
+  font-size: 2rem;
+}
+
+.outer-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.grid-wrapper {
+  margin: 0px;
+  padding: 0px;
+  border: 2px white;
+  height: 25rem;
+  width: 25rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  flex-wrap: wrap;
+  float: left;
+}
+
+.dark.grid-wrapper {
+  cursor: crosshair;
+}
+
+.column-description {
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: repeat(10, 1fr);
+  margin: 0px 5%;
+  transform: scaleX(0.9);
+}
+
+.inner-wrapper {
+  display: flex;
+}
+
+.inner-wrapper .row-description {
+  /* position: ; */
+  float: left;
+  display: inline-grid;
+  margin-right: 5%;
+}
+
+.numbers,
+.letters {
+  text-align: center;
+  font-family: "Star Jedi", Quicksand;
+  padding: 5px;
+}
+
+.dark.row-description {
+  float: right;
+}
+
+.cell {
+  background-color: rgba(100, 100, 100, 0.3);
+  border: 0.1rem solid rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 1rem;
+  color: rgba(195, 253, 255, 0.7) !important;
+  width: 34x;
+  height: 34px;
+  z-index: 9;
+}
+
+.grid-wrapper.computer .cell:hover {
+  transform: scale(1.1);
+  box-shadow: inset 0px 0px 10px lightblue;
+}
+.cell.droppable.hover {
+  box-shadow: inset 0px 0px 10px rgb(157, 255, 0);
+}
+
+.cell.empty {
+  background: none;
+}
+
+.cell.hit {
+  background: rgba(221, 66, 66, 0.2);
+}
+
+.cell.ship {
+  background: rgba(123, 221, 66, 0.2);
+}
+
+.cell.hit img {
+  height: 30px;
+}
+
+.light.side-title {
+  text-shadow: 0px 0px 15px lime;
+}
+
+.dark.side-title {
+  text-shadow: 0px 0px 15px red;
+}
+
+.light.grid-wrapper {
+  box-shadow: 0px 0px 15px lime;
+}
+
+.dark.grid-wrapper {
+  box-shadow: 0px 0px 15px red;
+}
+
+.dark .board-wrapper {
+  transform: scale(1.05);
+}
+
+.ship-img {
+  overflow: hidden;
+  /* transform: scale(0.5); */
+  width: 200px;
+  cursor: grab;
+  transition: all ease-out 0.5s;
+  overflow: hidden;
+}
+
+.ship-img.vertical {
+  transform: rotate(0.5deg);
+}
+
+.ship-img-grid {
+  transform: translate(12%) scale(0.33);
+  position: absolute;
+  z-index: 8;
+  user-select: none !important;
+  -moz-user-select: none !important;
+  -webkit-user-drag: none !important;
+  -webkit-user-select: none !important;
+  -ms-user-select: none !important;
+}
+.ship-img-grid.vertical {
+  transform: translate(0%, 52%) scale(0.33) rotate(90deg);
+}
+
+.flame-gif {
+  z-index: 9;
+}
+
+.light .cell .flame-gif {
+  filter: hue-rotate(110deg);
+}
+
+.cell.hit .ship-img-grid {
+  transform: translate(37%) scale(1);
+}
+
+.cell.hit .ship-img-grid.vertical {
+  transform: translate(0%, 160%) scale(1) rotate(90deg);
+}
+
+.ship-menage-wrapper {
+  width: 600px;
+  height: 450px;
+  flex-wrap: wrap;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.button-container {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ship-view {
+  width: 30px;
+  height: 40px;
+  margin: 5px 5px 10px 50px;
+  /* transition: all ease-in .5s; */
+}
+
+.ship-view.vertical {
+  transform: rotate(90deg);
+  width: 40px;
+  margin: none;
+}
+
+.ship-wrapper {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ship-wrapper.flipped {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.star-btn {
+  background-color: black;
+  border: 2px double white;
+  border-radius: 5px;
+  color: white;
+  font-family: "Star Jedi", Quicksand;
+  transition: all 1s;
+  padding: 10px;
+}
+
+.star-btn:hover {
+  box-shadow: 0px 0px 30px lightskyblue;
+}
